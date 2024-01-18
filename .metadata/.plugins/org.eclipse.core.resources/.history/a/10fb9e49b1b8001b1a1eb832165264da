@@ -1,0 +1,25 @@
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class ViewGetPower extends View<ControllerGetPower>{
+	private JTextField t;
+	public ViewGetPower(ElectricityCompany m, ControllerGetPower c) {
+		super(m,c);
+		this.setTitle("View Up");
+		this.setSize(400, 300);
+		GridLayout g=new GridLayout(1,2,0,0);
+		this.setLayout(g);
+		this.t=new JTextField("Type a consumer name here");
+		JButton b=new JButton("Tell me the Power");
+		g.add(b);
+		g.add(t);
+		update();
+		this.setVisible(true);
+	}
+	public void update() {
+		
+	}
+}
